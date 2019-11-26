@@ -2,24 +2,20 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/types.h>
-int main(){
+main(){
 	pid_t pid;
-	int x = 5;
+	int x=5;
 	pid = fork();
 	x++;
-	if(pid < 0)
-	{
+	if(pid <0){
 		printf("process creation error"); exit(-1);
-	}
-	else if(pid == 0)
-	{
+	
+}else id(pid == 0){
 		printf("Child process:");
 		printf("\nProcess id is %d", getpid());
 		printf("\nValue of x is %d", x);
 		printf("\nProcess id of parent %d\n\n", getppid());
-	}
-	else
-	{
+	}else{
 		printf("\nParent process:");
 		printf("\nProcess id is %d",getpid());
 		printf("\nValue of x is %d", x);
