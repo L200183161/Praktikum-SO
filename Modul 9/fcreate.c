@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <fcntl.h>
+#include <unistd.h>
 
-main(int argc, char *argv[]){
+main(int argc,char*argv[]){
 	int fd, n, len;
 	char buf[100];
 	if (argc!=2){

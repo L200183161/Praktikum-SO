@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
-main(int argc, char*argv[]){
-	int fd, l;
+#include <unistd.h>
+
+main(int argc, char *argv[]){
+	int fd, i;
 	char buf[100];
 	if(argc<2){
 		printf("Usage : ./a.out <filename>\n");
@@ -15,7 +17,7 @@ main(int argc, char*argv[]){
 	}
 	printf("Isi dari file %s adalah\n", argv[1]);
 	while(read(fd, buf, sizeof(buf))>0){
-		printf("%s, buf\n", );
+		printf("%s", buf);
 	}
 	close(fd);
 }

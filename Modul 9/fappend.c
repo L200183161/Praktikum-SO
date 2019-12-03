@@ -2,6 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include <fcntl.h>
+#include <unistd.h>
+
 main(int argc, char*argv[]){
 	int fd, n, len;
 	char buf[100];
@@ -18,5 +20,5 @@ main(int argc, char*argv[]){
 		len = strlen(buf);
 		write(fd, buf, len);
 	}
-	close(fd)
+	close(fd);
 }
